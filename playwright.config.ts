@@ -1,7 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // Environment variables are loaded via npm scripts or system environment
-// No need for dotenv since we set them directly in package.json scripts
 
 export default defineConfig({
   testDir: './tests',
