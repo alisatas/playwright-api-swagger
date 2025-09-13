@@ -1,0 +1,49 @@
+{
+  "name": "api-playwright-tests",
+  "version": "1.0.0",
+  "description": "Repository with automated API tests using Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:dev": "API_BASE_URL=https://jsonplaceholder.typicode.com REPORT_FORMAT=line npx playwright test",
+    "test:staging": "API_BASE_URL=https://petstore.swagger.io/v2 API_RETRIES=3 npx playwright test",
+    "generate-swagger": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" ./docs/generate-swagger.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/api-playwright-tests.git"
+  },
+  "keywords": [
+    "playwright",
+    "api-testing",
+    "automation",
+    "testing",
+    "javascript",
+    "typescript",
+    "dynamic-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/api-playwright-tests/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/api-playwright-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "@types/swagger-ui-express": "^4.1.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

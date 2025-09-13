@@ -1,0 +1,16 @@
+{
+  "development": {
+    "baseURL": "https://jsonplaceholder.typicode.com",
+    "timeout": 30000,
+    "retries": 2,
+    "parallel": true,
+    "description": "JSONPlaceholder API for development testing"
+  },
+  "staging": {
+    "baseURL": "https://petstore.swagger.io/v2",
+    "timeout": 45000,
+    "retries": 3,
+    "parallel": true,
+    "description": "Swagger Petstore API for staging testing"
+  }
+}

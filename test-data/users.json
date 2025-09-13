@@ -1,0 +1,28 @@
+{
+  "validUser": {
+    "name": "Dynamic Test User",
+    "username": "testuser",
+    "email": "test@example.com",
+    "address": {
+      "street": "Test Street",
+      "suite": "Apt. 123",
+      "city": "Test City",
+      "zipcode": "12345-678",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "test.org",
+    "company": {
+      "name": "Test Company",
+      "catchPhrase": "Testing made easy",
+      "bs": "dynamic testing solutions"
+    }
+  },
+  "testScenarios": {
+    "validUserIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "invalidUserIds": [999999, -1, 0]
+  }
+}
