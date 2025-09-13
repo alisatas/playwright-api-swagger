@@ -15,7 +15,6 @@ test.describe(' - Method DELETE', () => {
         const response = await apiHelper.deletePost(postId);
         expect(response.status()).toBe(200);
         
-        // JSONPlaceholder returns an empty object for successful deletes
         const responseBody = await response.json();
         expect(responseBody).toEqual({});
     });
@@ -38,7 +37,6 @@ test.describe(' - Method DELETE', () => {
         const invalidId = testData.testScenarios.invalidPostIds[0];
         
         const response = await apiHelper.deletePost(invalidId);
-        // JSONPlaceholder still returns 200 for non-existent resources
         expect(response.status()).toBe(200);
     });
 })

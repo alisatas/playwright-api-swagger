@@ -16,7 +16,6 @@ test.describe(' - Method GET', () => {
         expect(Array.isArray(posts)).toBeTruthy();
         expect(posts.length).toBeGreaterThan(0);
         
-        // Validate first post structure
         if (posts.length > 0) {
             ApiHelper.validatePostStructure(posts[0]);
         }
@@ -53,7 +52,6 @@ test.describe(' - Method GET', () => {
         const posts = await response.json();
         expect(Array.isArray(posts)).toBeTruthy();
         
-        // All posts should belong to userId 1
         posts.forEach((post: any) => {
             expect(post).toHaveProperty('userId', 1);
         });
@@ -67,7 +65,6 @@ test.describe(' - Method GET', () => {
         expect(Array.isArray(users)).toBeTruthy();
         expect(users.length).toBeGreaterThan(0);
         
-        // Validate first user structure
         if (users.length > 0) {
             ApiHelper.validateUserStructure(users[0]);
         }

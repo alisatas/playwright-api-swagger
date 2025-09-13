@@ -16,7 +16,6 @@ test.describe(' - Method FETCH', () => {
         expect(Array.isArray(posts)).toBeTruthy();
         expect(posts.length).toBeGreaterThan(0);
         
-        // Validate structure of multiple posts
         const samplePosts = posts.slice(0, 3);
         samplePosts.forEach((post: any) => {
             ApiHelper.validatePostStructure(post);
@@ -31,7 +30,6 @@ test.describe(' - Method FETCH', () => {
         expect(Array.isArray(users)).toBeTruthy();
         expect(users.length).toBeGreaterThan(0);
         
-        // Validate structure of multiple users
         const sampleUsers = users.slice(0, 3);
         sampleUsers.forEach((user: any) => {
             ApiHelper.validateUserStructure(user);
@@ -46,7 +44,6 @@ test.describe(' - Method FETCH', () => {
         expect(Array.isArray(comments)).toBeTruthy();
         expect(comments.length).toBeGreaterThan(0);
         
-        // Validate comment structure
         if (comments.length > 0) {
             const comment = comments[0];
             expect(comment).toHaveProperty('id');
@@ -65,7 +62,6 @@ test.describe(' - Method FETCH', () => {
         expect(Array.isArray(albums)).toBeTruthy();
         expect(albums.length).toBeGreaterThan(0);
         
-        // Validate album structure
         if (albums.length > 0) {
             const album = albums[0];
             expect(album).toHaveProperty('id');

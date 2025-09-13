@@ -14,12 +14,10 @@ test.describe(' - Method HEAD', () => {
             const response = await request.head(path);
             expect(response.status()).toBe(200);
             
-            // HEAD requests should not return a body
             const headers = response.headers();
             expect(headers['content-type']).toBeDefined();
             expect(headers['content-type']).toContain('application/json');
             
-            // Check for common headers
             expect(headers).toHaveProperty('date');
             expect(headers).toHaveProperty('server');
         });

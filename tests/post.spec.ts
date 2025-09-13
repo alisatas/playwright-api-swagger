@@ -19,7 +19,6 @@ test.describe(' - Method POST', () => {
         expect(responseBody).toHaveProperty('userId', data.userId);
         expect(responseBody).toHaveProperty('id');
         
-        // Validate structure
         ApiHelper.validatePostStructure(responseBody);
     });
 
@@ -42,7 +41,7 @@ test.describe(' - Method POST', () => {
 
     test('Create multiple posts with different user IDs', async () => {
         const testData = ApiHelper.loadTestData('posts.json');
-        const userIds = testData.testScenarios.userIds.slice(0, 3); // Test with first 3 users
+        const userIds = testData.testScenarios.userIds.slice(0, 3);
 
         for (const userId of userIds) {
             const { response } = await apiHelper.createPost({ userId });

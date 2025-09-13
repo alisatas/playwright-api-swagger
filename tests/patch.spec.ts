@@ -19,7 +19,6 @@ test.describe(' - Method PATCH', () => {
         
         expect(responseBody).toHaveProperty('title', data.title);
         expect(responseBody).toHaveProperty('id', postId);
-        // Other fields should remain unchanged
         expect(responseBody).toHaveProperty('userId');
         expect(responseBody).toHaveProperty('body');
     });
