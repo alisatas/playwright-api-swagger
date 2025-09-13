@@ -1,7 +1,7 @@
 {
   "validPost": {
     "title": "Dynamic Test Post",
-    "body": "This is a dynamically generated test post content",
+    "body": "This is a dynamically generated test post",
     "userId": 1
   },
   "updatePost": {
