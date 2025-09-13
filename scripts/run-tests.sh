@@ -1,9 +1,4 @@
-#!/bin/bash
-
-# Dynamic Test Runner Script
-# This script demonstrates how to run tests with different configurations
-
-echo "🚀 Dynamic API Test Runner"
+echo "API Test Runner"
 echo "=========================="
 
 # Function to run tests with specific environment
@@ -27,7 +22,6 @@ run_tests() {
     fi
 }
 
-# Check command line argument
 case "$1" in
     "dev")
         run_tests "Development" "https://jsonplaceholder.typicode.com" "REPORT_FORMAT=line"
