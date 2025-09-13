@@ -118,17 +118,6 @@ View traces in the interactive trace viewer:
 ```bash
 npx playwright show-trace test-results/trace.zip
 ```
-
-### Error Handling
-```typescript
-// Test invalid scenarios
-const invalidIds = testData.testScenarios.invalidPostIds;
-
-for (const id of invalidIds) {
-  const response = await apiHelper.getPost(id);
-  expect(response.status()).toBe(404);
-}
-```
 ### Test Organization
 - ✅ Use descriptive test names that explain the scenario
 - ✅ Group related tests using `test.describe()`
