@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test.describe('Dynamic API Tests - Method HEAD', () => {
+test.describe(' - Method HEAD', () => {
     const endpoints = [
         { path: '/posts', name: 'posts' },
         { path: '/users', name: 'users' },

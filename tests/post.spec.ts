@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { ApiHelper } from '../utils/api-helper';
 
-test.describe('Dynamic API Tests - Method POST', () => {
+test.describe(' - Method POST', () => {
     let apiHelper: ApiHelper;
 
     test.beforeEach(async ({ request }) => {
