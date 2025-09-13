@@ -31,9 +31,6 @@ export class ApiHelper {
     };
   }
 
-  /**
-   * Create a post with dynamic data
-   */
   async createPost(postData?: any) {
     const defaultData = ApiHelper.loadTestData('posts.json').validPost;
     const randomData = ApiHelper.generateRandomData();
@@ -157,9 +154,6 @@ export class ApiHelper {
     expect(typeof user.username).toBe('string');
   }
 
-  /**
-   * Wait for a condition with timeout
-   */
   static async waitForCondition(
     condition: () => Promise<boolean>,
     timeout: number = 5000,
